@@ -39,6 +39,7 @@ const Welcome = () => {
               key={i}
             >
               <div className='line-overlay animation-left-and-right' style={{ animationDelay: `${animationsDelayTimes[i]}s` }}>
+                <div className='adjust-block' />
                 {Array.from({ length: linesNumber }).map((n, i) => (
                   <div
                     className='cube'
@@ -54,14 +55,15 @@ const Welcome = () => {
       }
 
       {linesWidth !== null && linesNumber !== null &&
-        <div className='bg-col animation-up-and-down' >
+        <div className='bg-col ' >
           {Array.from({ length: linesNumber }).map((n, i) => (
             <div
               className='col'
               style={{ width: `${linesWidth}px`, height: `100%` }}
               key={i}
             >
-              <div className='col-overlay ' style={{ animationDelay: `${animationsDelayTimes[i]}s` }}>
+              <div className='col-overlay animation-up-and-down' style={{ animationDelay: `${animationsDelayTimes[i]}s` }}>
+                <div className='adjust-block' />
                 {Array.from({ length: linesNumber }).map((n, i) => (
                   <div
                     className='cube'

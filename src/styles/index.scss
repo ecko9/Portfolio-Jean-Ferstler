@@ -8,70 +8,70 @@
   @keyframes up-and-down {
     0% {top: 0%}
     40% {top: 0%}
-    60% {top: 12.6vw }
-    100% {top: 12.6vw}
+    60% {top: 16.66666vh }
+    100% {top: 16.66666vh}
   }
   @keyframes left-and-right {
     0% {left: 0%}
     40% {left: 0%}
-    60% {left: 12.6vw }
-    100% {left: 12.6vw}
+    60% {left: 16.66666vh }
+    100% {left: 16.66666vh}
   }
 }
 @media screen and (max-width: 1500px) and (min-width: 1200px){
   @keyframes up-and-down {
     0% {top: 0%}
     40% {top: 0%}
-    60% {top: 12.65vw }
-    100% {top: 12.65vw}
+    60% {top: 16.66666vh }
+    100% {top: 16.66666vh}
   }
   @keyframes left-and-right {
     0% {left: 0%}
     40% {left: 0%}
-    60% {left: 12.65vw }
-    100% {left: 12.65vw}
+    60% {left: 16.66666vh }
+    100% {left: 16.66666vh}
   }
 }
 @media screen and (max-width: 1200px) and (min-width: 1000px){
   @keyframes up-and-down {
     0% {top: 0%}
     40% {top: 0%}
-    60% {top: 12.7vw }
-    100% {top: 12.7vw}
+    60% {top: 16.66666vh }
+    100% {top: 16.66666vh}
   }
   @keyframes left-and-right {
     0% {left: 0%}
     40% {left: 0%}
-    60% {left: 12.7vw }
-    100% {left: 12.7vw}
+    60% {left: 16.66666vh }
+    100% {left: 16.66666vh}
   }
 }
 @media screen and (max-width: 1000px) and (min-width: 400px){
   @keyframes up-and-down {
     0% {top: 0%}
     40% {top: 0%}
-    60% {top: 16.9vw }
-    100% {top: 16.9vw}
+    60% {top: 16.66666vw }
+    100% {top: 16.66666vw}
   }
   @keyframes left-and-right {
     0% {left: 0%}
     40% {left: 0%}
-    60% {left: 16.9vw }
-    100% {left: 16.9vw}
+    60% {left: 16.66666vw }
+    100% {left: 16.66666vw}
   }
 }
 @media screen and (max-width: 400px){
   @keyframes up-and-down {
     0% {top: 0%}
     40% {top: 0%}
-    60% {top: 17.1vw }
-    100% {top: 17.1vw}
+    60% {top: 16.66666vw }
+    100% {top: 16.66666vw}
   }
   @keyframes left-and-right {
     0% {left: 0%}
     40% {left: 0%}
-    60% {left: 17.1vw }
-    100% {left: 17.1vw}
+    60% {left: 16.66666vw }
+    100% {left: 16.66666vw}
   }
 }
 
@@ -106,7 +106,7 @@
   position: fixed;
 
   background-color: black;
-  transform: scale(1) rotateZ(45deg);
+  transform: scale(01) rotateZ(45deg);
 }
 
 .bg-lines {
@@ -132,7 +132,9 @@
 
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
+
 
 .bg-col {
   position: absolute;
@@ -159,6 +161,7 @@
 
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .cube {
   position: relative;

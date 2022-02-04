@@ -4,211 +4,165 @@
   box-sizing: border-box;
 }
 
-$triangle-width: 25vh;
+@media screen and (max-width: 3000px) and (min-width: 1500px){
+  @keyframes up-and-down {
+    0% {top: 0%}
+    40% {top: 0%}
+    60% {top: 12.6vw }
+    100% {top: 12.6vw}
+  }
+  @keyframes left-and-right {
+    0% {left: 0%}
+    40% {left: 0%}
+    60% {left: 12.6vw }
+    100% {left: 12.6vw}
+  }
+}
+@media screen and (max-width: 1500px) and (min-width: 1200px){
+  @keyframes up-and-down {
+    0% {top: 0%}
+    40% {top: 0%}
+    60% {top: 12.65vw }
+    100% {top: 12.65vw}
+  }
+  @keyframes left-and-right {
+    0% {left: 0%}
+    40% {left: 0%}
+    60% {left: 12.65vw }
+    100% {left: 12.65vw}
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 1000px){
+  @keyframes up-and-down {
+    0% {top: 0%}
+    40% {top: 0%}
+    60% {top: 12.7vw }
+    100% {top: 12.7vw}
+  }
+  @keyframes left-and-right {
+    0% {left: 0%}
+    40% {left: 0%}
+    60% {left: 12.7vw }
+    100% {left: 12.7vw}
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 400px){
+  @keyframes up-and-down {
+    0% {top: 0%}
+    40% {top: 0%}
+    60% {top: 16.9vw }
+    100% {top: 16.9vw}
+  }
+  @keyframes left-and-right {
+    0% {left: 0%}
+    40% {left: 0%}
+    60% {left: 16.9vw }
+    100% {left: 16.9vw}
+  }
+}
+@media screen and (max-width: 400px){
+  @keyframes up-and-down {
+    0% {top: 0%}
+    40% {top: 0%}
+    60% {top: 17.1vw }
+    100% {top: 17.1vw}
+  }
+  @keyframes left-and-right {
+    0% {left: 0%}
+    40% {left: 0%}
+    60% {left: 17.1vw }
+    100% {left: 17.1vw}
+  }
+}
+
+.animation-up-and-down {
+  animation: up-and-down 10s linear infinite alternate both;
+}
+.animation-left-and-right {
+  animation: left-and-right 10s linear infinite alternate both;
+}
+
+@media screen and (min-width: 900px){
+  .Welcome {
+    top: -50vw;
+    left: -50vw;
+  
+    width: 200vw;
+    height: 200vw;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .Welcome {
+    top: -50vh;
+    left: -50vh;
+  
+    width: 200vh;
+    height: 200vh;
+  }
+}
 
 .Welcome {
-  width: $triangle-width * 6;
-  height: $triangle-width * 4;
+  position: fixed;
+
+  background-color: black;
+  transform: scale(1) rotateZ(45deg);
+}
+
+.bg-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.line {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.line-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
 
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+}
 
-  .big-cube {
-    position: relative;
-    z-index: 1;
+.bg-col {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    width: $triangle-width * 4;
-    height: $triangle-width * 4;
+  display: flex;
+  flex-direction: row;
+}
+.col {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.col-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    display: flex;
-    flex-wrap: wrap;
-  }
+  width: 100%;
+  height: 100%;
 
-
-  .cube {
-    position: relative;
-    width: 50%;
-    height: 50%;
-    
-  }
-
-  .c1 {
-   
-    .t1, .t2 {
-      transition: 1s linear 1s;
-      
-    }
-    .t3, .t4 {
-      transition: 1s linear;
-      
-    }
-  }
-
-  .c2 {
-    
-    transform: rotateZ(180deg);
-    .t1, .t4 {
-      transition: 1s linear 1s;
-      
-    }
-    .t2, .t3 {
-      transition: 1s linear;
-      
-    }
-  }
-
-  .c3 {
-    
-    transform: rotateZ(180deg);
-    .t1, .t4 {
-      transition: 1s linear;
-     
-    }
-    .t2, .t3 {
-      transition: 1s linear 1s;
-      
-    }
-  }
-
-  .c4 {
-    
-    .t1, .t2 {
-      transition: 1s linear;
-     
-    }
-    .t3, .t4 {
-      transition: 1s linear 1s;
-      
-    }
-  }
-
-
-  .triangle {
-    position: absolute;
-    width: 0;
-    height: 0;
-
-  }
-  .t1 {
-    top: 0%;
-    left: 0%;
-   
-    border-top: $triangle-width solid transparent;
-    border-bottom: $triangle-width solid transparent;
-
-    border-left: $triangle-width solid rgba(185, 65, 255, 0.808);
-    
-    transform-origin: right center;
-  }
-  .t2 {
-    top: 0%;
-    left: 0%;
-    
-    border-left: $triangle-width solid transparent;
-    border-right: $triangle-width solid transparent;
-    
-    border-top: $triangle-width solid rgb(201, 141, 216);
-
-    transform-origin: bottom center;
-  }
-  .t3 {
-    top: 0%;
-    left: 50%;
-
-    border-top: $triangle-width solid transparent;
-    border-bottom: $triangle-width solid transparent;
-    
-    border-right: $triangle-width solid rgb(51, 4, 80);
-    transform-origin: left center;
-  }
-  .t4 {
-    top: 50%;
-    left: 0%;
-
-    border-left: $triangle-width solid transparent;
-    border-right: $triangle-width solid transparent;
-
-    border-bottom: $triangle-width solid rgb(71, 6, 131);
-    transform-origin: top center;
-  }
-
-
-  .big-cube:hover {
-    .c1 {
-      .t3 {
-        transform-origin: left center;
-        transform: rotate3d(1,-1,0, 180deg);
-      }
-      .t4 {
-        transform-origin: top center;
-        transform: rotate3d(1,-1,0, 180deg);
-      }
-
-      .t1 {
-
-        transform-origin: right center;
-      }
-      .t2 {
-
-        transform-origin: bottom center;
-      }
-    }
-
-    .c2 {
-      .t2 {
-        transform: rotate3d(1,1,0, -180deg);
-        transform-origin: bottom center;
-      }
-      .t3 {
-        transform-origin: left center;
-        transform: rotate3d(1,1,0, -180deg);
-      }
-
-      .t1 {
-        transform-origin: right center;
-      }
-      .t4 {
-        transform-origin: top center;
-      }
-    }
-    
-    .c3 {
-      .t1 {
-        transform: rotate3d(1,1,0, -180deg);
-        transform-origin: right center;
-      }
-      .t4 {
-        transform-origin: top center;
-        transform: rotate3d(1,1,0, -180deg);
-      }
-
-      .t2 {
-        transform-origin: bottom center;
-      }
-      .t3 {
-        transform-origin: left center;
-      }
-    }
-
-    .c4 {
-      .t1 {
-        transform-origin: right center;
-        transform: rotate3d(1,-1,0, -180deg);
-      }
-      .t2 {
-        transform-origin: bottom center;
-        transform: rotate3d(1,-1,0, -180deg);
-      }
-
-      .t3 {
-        transform-origin: left center;
-      
-      }
-      .t4 {
-     
-        transform-origin: top center;
-      }
-    }
-
-  }
+  display: flex;
+  flex-direction: column;
+}
+.cube {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  border: 1px solid white;
 }

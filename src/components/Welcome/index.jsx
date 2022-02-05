@@ -1,22 +1,38 @@
 import React from 'react';
+import Col from '../Col';
+import Line from '../Line';
 
 const Welcome = () => {
 
-  const [linesNumber, setLinesNumber] = React.useState(8)
   const [bgSize, setBgSize] = React.useState(null)
-  const [animationsDelayTimes, setAnimationDelayTimes] = React.useState([1, 11, 5, 20, 3, 9, 16, 10, 2, 7, 1, 11, 5, 20, 3, 9, 16, 10, 2, 7])
+
 
   React.useEffect(
     () => {
-      const determineDiagonal = () => {
+      const determineBgSize = () => {
         let hypothenuse = Math.floor(Math.pow(Math.floor(Math.pow(window.screen.width, 2) + Math.pow(window.screen.height, 2)), 0.5))
         setBgSize(hypothenuse)
       }
 
-      determineDiagonal()
+      determineBgSize()
       return;
     }, []
   )
+
+  const isAnimated = (index) => {
+    if (index === 4)
+      return false
+    else
+      return true
+  }
+
+  const isMiddleCube = (index1, index2) => {
+    if (!isAnimated(index1) && !isAnimated(index2))
+      return true
+    else
+      return false
+  }
+
   return (
     <div className='Welcome' >
 
@@ -30,20 +46,15 @@ const Welcome = () => {
             left: `-${Math.floor((bgSize - window.screen.width) / 2)}px`
           }}
         >
-          {Array.from({ length: linesNumber }).map((n, i) => (
-            <div
-              className='line'
+          {Array.from({ length: 9 }).map((n, i) => (
+            <Line
               key={i}
-            >
-              <div className='line-overlay animation-left-and-right' style={{ animationDelay: `${animationsDelayTimes[i]}s` }}>
-                {Array.from({ length: linesNumber }).map((n, i) => (
-                  <div className='cube' key={i}>
-                  </div>
-                ))}
-              </div>
-
-            </div>
+              isAnimated={isAnimated}
+              isMiddleCube={isMiddleCube}
+              i={i}
+            />
           ))}
+
         </div>
       }
 
@@ -57,20 +68,19 @@ const Welcome = () => {
             left: `-${Math.floor((bgSize - window.screen.width) / 2)}px`
           }}
         >
-          {Array.from({ length: linesNumber }).map((n, i) => (
-            <div className='col' key={i} >
 
-              <div className='col-overlay animation-up-and-down' style={{ animationDelay: `${animationsDelayTimes[i]}s` }}>
-                {Array.from({ length: linesNumber }).map((n, i) => (
-                  <div className='cube' key={i} >
-                  </div>
-                ))}
-              </div>
-
-            </div>
+          {Array.from({ length: 9 }).map((n, i) => (
+            <Col
+              key={i}
+              isAnimated={isAnimated}
+              isMiddleCube={isMiddleCube}
+              i={i}
+            />
           ))}
         </div>
       }
+
+
     </div>
   );
 };

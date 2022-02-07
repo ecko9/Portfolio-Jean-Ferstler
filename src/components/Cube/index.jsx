@@ -1,17 +1,24 @@
 import React from 'react';
 
-const Cube = ({ isMiddleCube, i, i2, animationsColors, animationsDelayTimes }) => {
+const Cube = ({ linesNumber, i, i2, animationsDelayTimes }) => {
 
   const [indexColor, setIndexColor] = React.useState(0)
+  const animationsColors = ["black", "blue", "red", "yellow", "white", "grey", "purple", "orange", "green", "pink"]
 
   const getRandomInt = (max) => {
     return (Math.floor(Math.random() * max))
   }
 
   const swapColor = (e) => {
-    e.stopPropagation()
-    e.preventDefault()
     setIndexColor(getRandomInt(10))
+  }
+
+  const isMiddleCube = (index1, index2) => {
+    let middle = Math.floor(linesNumber / 2)
+    if ((index1 >= middle - 1) && (index1 <= middle) && (index2 >= middle - 1) && (index2 <= middle))
+      return true
+    else
+      return false
   }
 
   React.useLayoutEffect(
@@ -22,11 +29,11 @@ const Cube = ({ isMiddleCube, i, i2, animationsColors, animationsDelayTimes }) =
 
   return (
     <div
-      className={isMiddleCube(i, i2) ? 'cube main' : 'cube animation-display-cube-color'}
+      className={'cube animation-display-cube-color'}
       key={i2}
       style={{
         backgroundColor: `${animationsColors[indexColor]}`,
-        animationDelay: `${isMiddleCube(i, i2) ? 0 : animationsDelayTimes[i2]}s`
+        animationDelay: `${animationsDelayTimes[i2]}s`
       }}
       onAnimationIteration={e => swapColor(e)}
     >

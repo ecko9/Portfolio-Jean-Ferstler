@@ -5,7 +5,7 @@ import Line from '../Line';
 const Welcome = () => {
 
   const [bgSize, setBgSize] = React.useState(null)
-
+  const [linesNumber, setLinesNumber] = React.useState(10)
 
   React.useEffect(
     () => {
@@ -18,20 +18,6 @@ const Welcome = () => {
       return;
     }, []
   )
-
-  const isAnimated = (index) => {
-    if (index === 4)
-      return false
-    else
-      return true
-  }
-
-  const isMiddleCube = (index1, index2) => {
-    if (!isAnimated(index1) && !isAnimated(index2))
-      return true
-    else
-      return false
-  }
 
   return (
     <div className='Welcome' >
@@ -46,12 +32,10 @@ const Welcome = () => {
             left: `-${Math.floor((bgSize - window.screen.width) / 2)}px`
           }}
         >
-          {Array.from({ length: 9 }).map((n, i) => (
+          {Array.from({ length: linesNumber }).map((n, i) => (
             <Line
-              key={i}
-              isAnimated={isAnimated}
-              isMiddleCube={isMiddleCube}
-              i={i}
+              key={i} i={i}
+              linesNumber={linesNumber}
             />
           ))}
 
@@ -69,12 +53,11 @@ const Welcome = () => {
           }}
         >
 
-          {Array.from({ length: 9 }).map((n, i) => (
+          {Array.from({ length: linesNumber }).map((n, i) => (
             <Col
-              key={i}
-              isAnimated={isAnimated}
-              isMiddleCube={isMiddleCube}
-              i={i}
+              key={i} i={i}
+              linesNumber={linesNumber}
+              bgSize={bgSize}
             />
           ))}
         </div>

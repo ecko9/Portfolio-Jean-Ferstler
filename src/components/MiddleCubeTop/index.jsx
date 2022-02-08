@@ -1,7 +1,7 @@
 import react from 'react';
 import React from 'react';
 
-const MiddleCubeTop = ({ index, isAnimated, isAnimationLaunched, setIsAnimationLaunched, isAnimationFinished, setIsAnimationFinished }) => {
+const MiddleCubeTop = ({ index, isAnimationLaunched, isAnimationFinished }) => {
 
   const [animation, setAnimation] = React.useState("")
 
@@ -15,36 +15,28 @@ const MiddleCubeTop = ({ index, isAnimated, isAnimationLaunched, setIsAnimationL
     }
   }
 
-  const swapAnimation = () => {
-    if (index === 1)
-      if (isAnimationLaunched && !isAnimationFinished)
-        setIsAnimationFinished(true)
-    if (index === 3)
-      if (isAnimationLaunched && isAnimationFinished) {
-        setIsAnimationFinished(false)
-        setIsAnimationLaunched(false)
-      }
-  }
-
   react.useEffect(
     () => {
 
       if (isAnimationLaunched) {
-        if (!isAnimated && isAnimationFinished)
-          setAnimation(`animation-opacity`)
+
         if (!isAnimationFinished)
           setAnimation(`animation-fold-${index}`)
+        else
+          setAnimation('')
       }
       else
-        setAnimation("")
+        if (isAnimationFinished)
+          setAnimation(`animation-opacity`)
+        else
+          setAnimation("")
 
-    }, [isAnimationLaunched, isAnimationFinished, isAnimated]
+    }, [isAnimationLaunched, isAnimationFinished]
   )
 
   return (
     <div
       className={`main-cube c${index}-top ${animation}`}
-      onAnimationEnd={e => swapAnimation()}
     >
       {sayMyName()}
     </div>

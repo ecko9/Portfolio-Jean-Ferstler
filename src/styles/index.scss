@@ -92,10 +92,23 @@ $cubeSize: 10%;
   100% {opacity:1;}
 }
 .animation-opacity {
-  animation: swap-opacity 2s linear 0s 1 both
+  animation: swap-opacity 5s linear 0s 1 both;
 }
 .animation-opacity-reverse {
-  animation: swap-opacity 2s linear reverse 0s 1 both
+  animation: swap-opacity 2s linear 0s 1 reverse both;
+}
+
+.animation-opacity-1 {
+  animation: swap-opacity 0.5s linear 2s 1 both;
+}
+.animation-opacity-2 {
+  animation: swap-opacity 0.5s linear 2.5s 1 both;
+}
+.animation-opacity-3 {
+  animation: swap-opacity 0.5s linear 3s 1 both;
+}
+.animation-opacity-4 {
+  animation: swap-opacity 0.5s linear 3.5s 1 both;
 }
 
 
@@ -143,14 +156,14 @@ $cubeSize: 10%;
 
   height: 100vh;
   width: 100vw;
-
 }
 
 .bg-lines {
   position: absolute;
 
-  background-color: white;
   transform: rotateZ(45deg);
+
+  background-color: white;
 }
 
 .line {
@@ -160,6 +173,7 @@ $cubeSize: 10%;
 
   width: 100%;
   height: $cubeSize;
+
 }
 .line-overlay {
   position: absolute;
@@ -170,22 +184,23 @@ $cubeSize: 10%;
   height: 100%;
 
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   overflow: hidden;
 
   .cube {
     width: $cubeSize;
     height: 100%;
-    margin: 1px 0px 1px 1px;
   }
 }
 
 
 .bg-col {
   position: absolute;
+
   transform: rotateZ(45deg);
+
   display: flex;
-  flex-direction: row;
 }
 .col {
   position: relative;
@@ -194,6 +209,7 @@ $cubeSize: 10%;
 
   width: $cubeSize;
   height: 100%;
+
 }
 .col-overlay {
   position: absolute;
@@ -205,35 +221,76 @@ $cubeSize: 10%;
 
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   overflow: hidden;
 
   .cube {
     width: 100%;
     height: $cubeSize;
-    margin: 1px 1px 0 1px;
   }
 }
 .cube {
   position: relative;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
 }
 
 .bg-middle {
   position: absolute;
   top: 30%;
-  left:0%;
+  left: 0%;
 
   height: 40%;
   width: 400%;
 
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: stretch;
   align-items: center;
 
   background-color: rgb(0,0,0,0);
   transition: 1s linear;
-  z-index: 2;
+  z-index: 1;
+
+  .middle-big-cube {
+    position: relative;
+    height: 50%;
+    width: 50%;
+
+    .petal {
+      position: absolute;
+      height: 0;
+      width: 0;
+
+      opacity: 0;
+    }
+    .p1 {
+      top: 0;
+      left: 0;
+    }
+    .p2 {
+      top:50%;
+      left: 0%
+    }
+    .p3 {
+      top: 50%;
+      left: 0%;
+    }
+    .p4 {
+      top: 50%;
+      left: 50%;
+    }
+  }
+  .mbc-1 {
+    transform: rotateZ(90deg);
+  }
+  .mbc-2 {
+    transform: rotateZ(180deg);
+  }
+  .mbc-4 {
+    transform: rotateZ(270deg);
+  }
 }
 .bg-middle:hover {
   background-color: rgba(255, 255, 255, 1);
@@ -246,10 +303,9 @@ $cubeSize: 10%;
   height: 50%;
   width: 50%;
 
-
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
 }

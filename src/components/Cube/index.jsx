@@ -13,14 +13,6 @@ const Cube = ({ linesNumber, i, i2, animationsDelayTimes }) => {
     setIndexColor(getRandomInt(10))
   }
 
-  const isMiddleCube = (index1, index2) => {
-    let middle = Math.floor(linesNumber / 2)
-    if ((index1 >= middle - 1) && (index1 <= middle) && (index2 >= middle - 1) && (index2 <= middle))
-      return true
-    else
-      return false
-  }
-
   React.useLayoutEffect(
     () => {
       setIndexColor(getRandomInt(10))

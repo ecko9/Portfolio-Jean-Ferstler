@@ -1,27 +1,29 @@
 import React, { useRef } from 'react';
 
-const MiddleTriangle = ({ index, isAnimated, isAnimationFinished, size }) => {
+const MiddleTriangle = ({ index, isAnimationFinished, isAnimationLaunched, size }) => {
 
   const [animation, setAnimation] = React.useState("")
-  const [triangleStyle, setTriangleStyle] = React.useState(null)
 
 
   React.useEffect(
     () => {
-      if (isAnimated && isAnimationFinished)
-        setAnimation(`animation-flower-t${index}`)
+
+      if (isAnimationLaunched) {
+        if (!isAnimationFinished)
+          setAnimation(`animation-flower-t${index}`)
+        else
+          setAnimation('')
+      }
       else
-        setAnimation('')
-      return;
-    }, [isAnimated, isAnimationFinished]
-  )
-
-  React.useEffect(
-    () => {
+        if (isAnimationFinished)
+          setAnimation(`animation-opacity-reverse`)
+        else
+          setAnimation('')
 
       return;
-    }, []
+    }, [isAnimationFinished, isAnimationLaunched]
   )
+
 
   return (
     <div

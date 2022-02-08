@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import MiddleBigCube from '../MiddleBigCube';
 import MiddleCubeTop from '../MiddleCubeTop';
 import MiddleTriangle from '../MiddleTriangle';
 
@@ -12,20 +13,35 @@ const WelcomeMiddleAnimation = ({ bgSize }) => {
     () => {
       if (isAnimated && !isAnimationLaunched)
         setIsAnimationLaunched(true)
+
+      if (!isAnimated && isAnimationFinished)
+        setIsAnimationLaunched(false)
       return;
-    }, [isAnimated]
+    }, [isAnimated, isAnimationLaunched, isAnimationFinished]
   )
 
   return (
     <div className='bg-middle' >
+
+      {Array.from({ length: 4 }).map((n, i) => (
+        <MiddleBigCube
+          key={i} index={i + 1}
+          bgSize={bgSize}
+          isAnimated={isAnimated}
+          isAnimationLaunched={isAnimationLaunched} setIsAnimationLaunched={setIsAnimationLaunched}
+          isAnimationFinished={isAnimationFinished} setIsAnimationFinished={setIsAnimationFinished}
+        />
+      ))}
+
 
       <div className='bg-middle-center bg-middle-center-bot' >
         {Array.from({ length: 4 }).map((n, i) => (
           <MiddleTriangle
             key={i}
             index={i + 1}
-            isAnimationFinished={isAnimationFinished}
             isAnimated={isAnimated}
+            isAnimationLaunched={isAnimationLaunched}
+            isAnimationFinished={isAnimationFinished}
             size={Math.floor(bgSize / 10)}
           />
         ))}
@@ -37,8 +53,8 @@ const WelcomeMiddleAnimation = ({ bgSize }) => {
             key={i}
             index={i + 1}
             isAnimated={isAnimated}
-            isAnimationLaunched={isAnimationLaunched} setIsAnimationLaunched={setIsAnimationLaunched}
-            isAnimationFinished={isAnimationFinished} setIsAnimationFinished={setIsAnimationFinished}
+            isAnimationLaunched={isAnimationLaunched}
+            isAnimationFinished={isAnimationFinished}
           />))}
       </div>
 

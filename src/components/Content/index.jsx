@@ -1,11 +1,15 @@
 import React from 'react';
+import MiddlePresentation from '../MiddlePresentation';
 import NavOverlay from '../NavOverlay';
 
 const Content = () => {
+
+  const [displayElement, setDisplayElement] = React.useState("Works")
+
   return (
     <div className='Content'>
       <NavOverlay />
-      <div className='infos'></div>
+      <MiddlePresentation displayElement={displayElement} />
     </div>
   );
 };

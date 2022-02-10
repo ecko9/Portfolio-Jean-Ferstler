@@ -2,6 +2,8 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
 $cubeSize: 10%;
@@ -178,6 +180,16 @@ $cubeSize: 10%;
   animation: stop-animation 2s linear 0s 1 both;
 }
 
+
+@keyframes write-word {
+  0% {width: 0;}
+  10% {width: 0;}
+  30% {width: 100%;}
+  90% {width: 100%;}
+  100% {width: 0;}
+}
+
+
 .Home {
   position: fixed;
   top: 0;
@@ -205,13 +217,179 @@ $cubeSize: 10%;
   background-color: rgba(187, 50, 50, 0.8);
 }
 
-.infos {
+.MiddlePresentation {
   position: relative;
 
   width: 80%;
   height: 70%;
 
-  background-color: black;
+  .AboutMe {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h2 {
+      font-size: 1000%;
+      overflow: hidden;
+      height: 80%;
+
+      animation: write-word 10s steps(10, end) 0s infinite both; 
+    }
+    p {
+      height: 20%;
+      width: 100%;
+
+      font-size: 120%;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  .Works {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    .WorksIndex {
+      position: relative;
+
+      width: 20%;
+      height: 100%;
+
+      .prev {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 20%;
+        padding-right: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .work-index {
+        position: absolute;
+        top: 20%;
+        left: 0;
+
+        width: 100%;
+        height: 60%;
+        padding-right: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 200px;
+        border-right: 2px solid black;
+      }
+      .next {
+        position: absolute;
+        top: 80%;
+        left: 0;
+
+        padding-right: 50px;
+        width: 100%;
+        height: 20%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .WorksPresentation {
+      width: 80%;
+      height: 100%;
+
+      display: flex;
+      
+      .work-presentation {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .work-image {
+          width: 90%;
+          height: 50%;
+
+          border: 2px solid black;
+        }
+        .work-description {
+          width: 90%;
+          height: 30%;
+
+          display: flex;
+          flex-wrap: wrap;
+
+          h2 {
+            width: 50%;
+          }
+          .bar {
+            width: 50%;
+            height: 2px;
+            margin-top: 15px;
+  
+            background-color: black;
+          }
+          p {
+            width: 100%;
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .NetworksBar {
+    width: 50px;
+  }
+  .box-left-overlay {
+    width: 50px;
+  }
+  .NavBar {
+    height: 50px;
+    .bar {
+      margin-left: 20%;
+    }
+  }
+  .MiddlePresentation {
+    top:1%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .NavBar {
+    height: 40px;
+    .bar {
+      margin-left: 0;
+    }
+    .NavTitle {
+      width: 100%;
+    }
+  }
+
+  .NetworksBar {
+    width: 25px;  
+  }
+
+  .box-left-overlay {
+    width: 25px;
+  }
+
+  .MiddlePresentation {
+    top:2.5%;
+  }
 }
 
 .nav-overlay {
@@ -221,29 +399,6 @@ $cubeSize: 10%;
   right: 0;
   bottom: 0;
 
-  @media screen and (min-width: 500px) {
-    .NetworksBar {
-      width: 50px;
-    }
-    .box-left-overlay {
-      width: 50px;
-    }
-    .NavBar {
-      height: 50px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    .NavBar {
-      height: 40px;
-      .bar { margin: 0;}
-    }
-    .NetworksBar {
-      width: 25px;  
-    }
-    .box-left-overlay {
-      width: 25px;
-    }
-  }
 
   .box-left-overlay {
     position: absolute;
@@ -262,19 +417,30 @@ $cubeSize: 10%;
     .MailBar {
       position: absolute;
       bottom: 0%;
-      left: 50%;
+      left: 0%;
 
-      height: 10%;
       width: 80vw;
 
       display: flex;
       align-items: flex-end;
 
+      .bar2 {
+        height: 2px;
+        width: 50px;
+
+        background-color: black;
+        
+      }
+
+      p {
+        margin-left: 20px;
+        transform: translateY(30%);
+      }
+
       .bar {
         height: 2px;
         flex: 2;
 
-        margin-bottom: 1%;
         margin-left: 20px;
         margin-right: 35%;
 
@@ -292,14 +458,14 @@ $cubeSize: 10%;
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    flex-wrap: wrap;
 
     .bar {
       height: 2px;
       flex: 2;
+      align-self: flex-end;
 
-      margin-bottom: 1%;
-      margin-left: 20%;
+      margin-bottom: 10px;
       margin-right: 10px;
 
       background-color: black;
@@ -323,6 +489,8 @@ $cubeSize: 10%;
     }
 
     .NavLinks {
+      height: 100%;
+
       display: flex;
       flex-wrap: nowrap;
       align-items: flex-end;
@@ -346,6 +514,7 @@ $cubeSize: 10%;
     align-items: flex-end;
 
     p {
+      color: white;
       width: 100px;
       transform: rotateZ(90deg) translateX(-30%) translateY(-275%);
     }

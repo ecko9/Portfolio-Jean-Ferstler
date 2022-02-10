@@ -1,8 +1,8 @@
 import React from 'react';
-import Col from '../Col';
-import Line from '../Line';
+import Col from './Col';
+import Line from './Line';
 
-const Welcome = () => {
+const Background = ({ displayWelcomeAnimation, setDisplayWelcomeAnimation }) => {
 
   const [bgSize, setBgSize] = React.useState(null)
   const [linesNumber, setLinesNumber] = React.useState(10)
@@ -20,7 +20,7 @@ const Welcome = () => {
   )
 
   return (
-    <div className='Welcome' >
+    <div className='Background' >
 
       {bgSize !== null &&
         <div
@@ -58,6 +58,8 @@ const Welcome = () => {
               key={i} i={i}
               linesNumber={linesNumber}
               bgSize={bgSize}
+              displayWelcomeAnimation={displayWelcomeAnimation}
+              setDisplayWelcomeAnimation={setDisplayWelcomeAnimation}
             />
           ))}
         </div>
@@ -68,4 +70,4 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+export default Background;

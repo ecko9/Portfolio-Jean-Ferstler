@@ -1,20 +1,20 @@
 import React from 'react';
-import Welcome from '../components/Welcome';
+import Background from '../components/Background';
+import Content from '../components/Content';
 
 const Home = () => {
 
-  const [wlcA, setWlcA] = React.useState(false)
-
-  const testtt = (e) => {
-    console.log("coucou")
-    setWlcA(true)
-  }
+  const [displayWelcomeAnimation, setDisplayWelcomeAnimation] = React.useState(true)
 
   return (
     <div className='Home'>
-      <Welcome />
-      <button className='BtnWelcome' onClick={e => testtt(e)}>
-      </button>
+      <Background
+        displayWelcomeAnimation={displayWelcomeAnimation}
+        setDisplayWelcomeAnimation={setDisplayWelcomeAnimation}
+      />
+      {!displayWelcomeAnimation &&
+        <Content />
+      }
     </div>
   );
 };

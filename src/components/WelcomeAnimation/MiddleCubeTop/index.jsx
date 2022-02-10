@@ -1,7 +1,7 @@
 import react from 'react';
 import React from 'react';
 
-const MiddleCubeTop = ({ index, isAnimationLaunched, isAnimationFinished }) => {
+const MiddleCubeTop = ({ index, isAnimated }) => {
 
   const [animation, setAnimation] = React.useState("")
 
@@ -15,23 +15,13 @@ const MiddleCubeTop = ({ index, isAnimationLaunched, isAnimationFinished }) => {
     }
   }
 
+
   react.useEffect(
     () => {
-
-      if (isAnimationLaunched) {
-
-        if (!isAnimationFinished)
-          setAnimation(`animation-fold-${index}`)
-        else
-          setAnimation('')
-      }
-      else
-        if (isAnimationFinished)
-          setAnimation(`animation-opacity`)
-        else
-          setAnimation("")
-
-    }, [isAnimationLaunched, isAnimationFinished]
+      if (isAnimated && animation === "")
+        setAnimation(`animation-fold-${index}`)
+      // eslint-disable-next-line
+    }, [isAnimated]
   )
 
   return (

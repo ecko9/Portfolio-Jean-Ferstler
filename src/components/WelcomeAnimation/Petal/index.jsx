@@ -1,42 +1,16 @@
 import React from 'react';
 
-const Petal = ({ index, mbcIndex, bgSize, isAnimationLaunched, isAnimationFinished, setIsAnimationFinished }) => {
+const Petal = ({ index, bgSize, isAnimated, setIsAnimationFinished }) => {
 
   const [animation, setAnimation] = React.useState("")
 
-  const swapAnimation = () => {
-    if (mbcIndex === 4) {
-
-      if (!isAnimationLaunched && isAnimationFinished) {
-        setIsAnimationFinished(false)
-      }
-
-      if (isAnimationLaunched && !isAnimationFinished) {
-        setIsAnimationFinished(true)
-      }
-    }
-  }
-
   React.useEffect(
     () => {
-
-      if (isAnimationLaunched) {
-        if (!isAnimationFinished)
-          setAnimation(`animation-opacity-${index}`)
-        else
-          setAnimation('')
-      }
-      else {
-        if (isAnimationFinished) {
-          setAnimation(`animation-opacity-reverse`)
-        }
-        else
-          setAnimation("")
-      }
-
-
+      if (isAnimated && animation === "")
+        setAnimation(`animation-opacity-${index}`)
       return;
-    }, [isAnimationLaunched, isAnimationFinished]
+      // eslint-disable-next-line
+    }, [isAnimated]
   )
 
   const choosePetal = () => {
@@ -74,7 +48,7 @@ const Petal = ({ index, mbcIndex, bgSize, isAnimationLaunched, isAnimationFinish
       return (
         <div
           className={`petal p4 ${animation}`}
-          onAnimationEndCapture={e => swapAnimation()}
+          onAnimationEnd={e => setIsAnimationFinished(true)}
           style={{
             borderBottom: `${Math.floor(bgSize / 10)}px solid red`,
             borderRight: `${Math.floor(bgSize / 10)}px solid transparent`

@@ -4,11 +4,11 @@ import NavOverlay from '../NavOverlay';
 
 const Content = () => {
 
-  const [displayElement, setDisplayElement] = React.useState("Works")
+  const [displayElement, setDisplayElement] = React.useState("Career")
 
   return (
     <div className='Content'>
-      <NavOverlay />
+      <NavOverlay setDisplayElement={setDisplayElement} />
       <MiddlePresentation displayElement={displayElement} />
     </div>
   );

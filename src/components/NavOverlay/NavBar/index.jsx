@@ -1,10 +1,10 @@
 import React from 'react';
 
-const NavBar = () => {
+const NavBar = ({ setDisplayElement }) => {
   return (
     <div className='NavBar'>
 
-      <div className='NavTitle'>
+      <div className='NavTitle' onClick={e => setDisplayElement("AboutMe")}>
         <h1>
           <p className='firstname'>{'Jean'}&nbsp;</p>
           <p className='lastname'>{'Ferstler'}</p>
@@ -14,10 +14,10 @@ const NavBar = () => {
       <div className='bar' />
 
       <div className='NavLinks'>
-        <div className='NavProjects'>
+        <div className='NavProjects' onClick={e => setDisplayElement("Works")}>
           <h2>Projets</h2>
         </div>
-        <div className='NavProjects'>
+        <div className='NavProjects' onClick={e => setDisplayElement("Career")}>
           <h2>Parcours</h2>
         </div>
       </div>

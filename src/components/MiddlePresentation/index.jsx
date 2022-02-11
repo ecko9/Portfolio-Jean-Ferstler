@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutMe from '../AboutMe';
+import Career from '../Career';
 import Works from '../Works';
 
 const MiddlePresentation = ({ displayElement }) => {
@@ -10,6 +11,9 @@ const MiddlePresentation = ({ displayElement }) => {
       }
       {displayElement === "Works" &&
         <Works />
+      }
+      {displayElement === "Career" &&
+        <Career />
       }
     </div>
   );

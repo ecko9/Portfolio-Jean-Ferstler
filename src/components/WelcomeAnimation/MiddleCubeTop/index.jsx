@@ -26,7 +26,7 @@ const MiddleCubeTop = ({ index, isAnimated }) => {
 
   return (
     <div
-      className={`main-cube c${index}-top ${animation}`}
+      className={`middle-cube-top c${index}-top ${animation}`}
     >
       {sayMyName()}
     </div>

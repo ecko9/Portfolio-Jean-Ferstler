@@ -8,7 +8,7 @@ const MiddleBigCube = ({ index, bgSize, isAnimated, isAnimationFinished, setIsAn
   React.useEffect(
     () => {
       if (isAnimationFinished && backgroundColor === "rgba(0, 0, 0, 0)")
-        setBackgroundColor("red")
+        setBackgroundColor("rgba(255,255,255, 0)")
       return
       // eslint-disable-next-line
     }, [isAnimationFinished]

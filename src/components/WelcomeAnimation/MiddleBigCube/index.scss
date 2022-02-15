@@ -1,0 +1,16 @@
+@import '../Petal/index.scss';
+
+.middle-big-cube {
+  position: relative;
+  height: 50%;
+  width: 50%;
+}
+.mbc-1 {
+  transform: rotateZ(90deg);
+}
+.mbc-2 {
+  transform: rotateZ(180deg);
+}
+.mbc-4 {
+  transform: rotateZ(270deg);
+}

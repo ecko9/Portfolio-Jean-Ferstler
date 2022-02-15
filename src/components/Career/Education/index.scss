@@ -1,0 +1,58 @@
+.Education {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  .education-title {
+    position: relative;
+    width: 200px;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+    .bar {
+      height: 2px;
+      flex: 2;
+
+      background-color: black;
+    }
+    .bar2 {
+      position: absolute;
+      top: 100%;
+      left: 0%;
+
+      height: 500%;
+      width: 2px;
+
+      background-color: black;
+    }
+  }
+  .education-list {
+    width: 100%;
+
+    margin-top: 20px;
+    padding-left: 20px;
+
+    .education-card {
+      width: 100%;
+      padding: 10px;
+
+      display: flex;
+      align-items: center;
+      span {
+        color: white;
+        margin-left: 20px;
+      }
+      h3 {
+        margin-right: 20px;
+      }
+      .bar {
+        height: 2px;
+        flex:2;
+
+        background-color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.middle-triangle {
+  position: absolute;
+  transform-origin: center left;
+
+  height: 0;
+  width: 0;
+}
+.t1 {
+  top: 0;
+  left: 0;
+}
+.t2 {
+  top: -50%;
+  left: 50%;
+  transform: rotateZ(90deg);
+}
+.t3 {
+  top: 0;
+  left: 100%;
+  transform: rotateZ(180deg);
+}
+.t4 {
+  top: 50%;
+  left: 50%;
+  transform: rotateZ(270deg);
+}

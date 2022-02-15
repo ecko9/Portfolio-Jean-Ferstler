@@ -1,0 +1,19 @@
+@import '../Career/index.scss';
+@import '../AboutMe/index.scss';
+@import '../Works/index.scss';
+
+.MiddlePresentation {
+  position: relative;
+
+  width: 80%;
+  height: 70%;
+
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+}

@@ -1,0 +1,21 @@
+.text-presentation-left {
+  position: absolute;
+  top: 75%;
+  left: 0%;
+
+  width: 100%;
+  height: 25%;
+
+  z-index: 1;
+  display: flex;
+
+  .letter1 {
+    animation: letter-from-top 2s linear 0s 1 both;
+   }
+  .letter2 {
+    animation: letter-from-top 2s linear 1s 1 both;
+  }
+  .letter3 {
+    animation: letter-from-top 2s linear 2s 1 both;
+  }
+}

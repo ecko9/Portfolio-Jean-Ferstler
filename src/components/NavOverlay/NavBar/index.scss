@@ -1,0 +1,52 @@
+.NavBar {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .bar {
+    height: 2px;
+    flex: 2;
+    align-self: flex-end;
+
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    background-color: black;
+  }
+
+  .NavTitle {
+    h1 {
+      height: 100%;
+
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+
+      .firstname {
+        color: black;
+      }
+      .lastname {
+        color: white;
+      }
+    }
+  }
+
+  .NavLinks {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+
+    h2 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}

@@ -12,9 +12,8 @@ const WelcomeAnimation = ({ bgSize, setDisplayWelcomeAnimation }) => {
   const [isAnimationFinished, setIsAnimationFinished] = React.useState(false)
   const [animation, setAnimation] = React.useState("")
 
-
   return (
-    <div className={`bg-middle ${animation}`}>
+    <div className={`bg-middle-animation ${animation}`}>
 
       {isAnimationFinished &&
         <ButtonEnterWebSite setAnimation={setAnimation} setDisplayWelcomeAnimation={setDisplayWelcomeAnimation} />

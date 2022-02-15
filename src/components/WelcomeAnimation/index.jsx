@@ -30,7 +30,6 @@ const WelcomeAnimation = ({ bgSize, setDisplayWelcomeAnimation }) => {
           key={i} index={i + 1}
           bgSize={bgSize}
           isAnimated={isAnimated}
-          isAnimationFinished={isAnimationFinished}
           setIsAnimationFinished={setIsAnimationFinished}
         />
       ))}

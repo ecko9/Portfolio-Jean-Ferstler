@@ -1,19 +1,27 @@
 .button-enter-ws {
   position: absolute;
-  top: 45%;
-  left: 45%;
-
-  width: 10%;
-  height: 10%;
-
   z-index: 1;
+  top: 40%;
+  left: 40%;
 
-  background-color: yellow;
+  width: 20%;
+  height: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $secondary;
   border-radius: 50%;
-  animation: swap-opacity 8s linear 0s 1 both;
+  animation: swap-opacity 5s linear 0s 1 both;
   transition: transform 1s linear;
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  span {
+    font-size: 18px;
+    transform: rotateZ(-45deg);
   }
 }

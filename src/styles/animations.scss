@@ -83,6 +83,7 @@
   0% {opacity: 0;}
   100% {opacity:1;}
 }
+
 .animation-opacity {
   animation: swap-opacity 5s linear 0s 1 both;
 }
@@ -93,14 +94,26 @@
 .animation-opacity-1 {
   animation: swap-opacity 2s linear 2s 1 both;
 }
+@keyframes swap-opacity2 {
+  0% {opacity: 0;}
+  100% {opacity:0.8;}
+}
 .animation-opacity-2 {
-  animation: swap-opacity 2s linear 2.5s 1 both;
+  animation: swap-opacity2 2s linear 2.5s 1 both;
+}
+@keyframes swap-opacity3 {
+  0% {opacity: 0;}
+  100% {opacity:0.6;}
 }
 .animation-opacity-3 {
-  animation: swap-opacity 2s linear 3s 1 both;
+  animation: swap-opacity3 2s linear 3s 1 both;
+}
+@keyframes swap-opacity4 {
+  0% {opacity: 0;}
+  100% {opacity:0.4;}
 }
 .animation-opacity-4 {
-  animation: swap-opacity 2s linear 3.5s 1 both;
+  animation: swap-opacity4 2s linear 3.5s 1 both;
 }
 
 

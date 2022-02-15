@@ -18,8 +18,9 @@ const Petal = ({ index, bgSize, isAnimated, setIsAnimationFinished }) => {
       return (
         <div
           className={`petal p1 ${animation}`}
+          onAnimationStart={e => setIsAnimationFinished(true)}
           style={{
-            borderBottom: `${Math.floor(bgSize / 10)}px solid red`,
+            borderBottom: `${Math.floor(bgSize / 10)}px solid rgba(187, 50, 50, 0.8)`,
             borderRight: `${Math.floor(bgSize / 10)}px solid transparent`
           }}
         />
@@ -29,7 +30,7 @@ const Petal = ({ index, bgSize, isAnimated, setIsAnimationFinished }) => {
         <div
           className={`petal p2 ${animation}`}
           style={{
-            borderTop: `${Math.floor(bgSize / 10)}px solid red`,
+            borderTop: `${Math.floor(bgSize / 10)}px solid rgba(187, 50, 50, 0.8)`,
             borderRight: `${Math.floor(bgSize / 10)}px solid transparent`
           }}
         />
@@ -39,7 +40,7 @@ const Petal = ({ index, bgSize, isAnimated, setIsAnimationFinished }) => {
         <div
           className={`petal p3 ${animation}`}
           style={{
-            borderBottom: `${Math.floor(bgSize / 10)}px solid red`,
+            borderBottom: `${Math.floor(bgSize / 10)}px solid rgba(187, 50, 50, 0.8)`,
             borderLeft: `${Math.floor(bgSize / 10)}px solid transparent`
           }}
         />
@@ -48,9 +49,8 @@ const Petal = ({ index, bgSize, isAnimated, setIsAnimationFinished }) => {
       return (
         <div
           className={`petal p4 ${animation}`}
-          onAnimationEnd={e => setIsAnimationFinished(true)}
           style={{
-            borderBottom: `${Math.floor(bgSize / 10)}px solid red`,
+            borderBottom: `${Math.floor(bgSize / 10)}px solid rgba(187, 50, 50, 0.8)`,
             borderRight: `${Math.floor(bgSize / 10)}px solid transparent`
           }}
         />

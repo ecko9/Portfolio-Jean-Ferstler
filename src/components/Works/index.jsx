@@ -20,12 +20,12 @@ const Works = () => {
     <div className='Works'>
       <div className='WorksIndex'>
         {worksIndex > 0 &&
-          <div className='prev' onClick={e => setWorksIndex(worksIndex - 1)}>{`0${worksIndex - 1}`}</div>
+          <div className='prev' onClick={e => setWorksIndex(worksIndex - 1)}><p>{`0${worksIndex - 1}`}</p></div>
         }
-        <div className='work-index'>{`0${worksIndex}`}</div>
+        <div className='work-index'><p>{`0${worksIndex}`}</p></div>
 
         {worksIndex < (works.length - 1) &&
-          <div className='next' onClick={e => setWorksIndex(worksIndex + 1)}>{`0${worksIndex + 1}`}</div>
+          <div className='next' onClick={e => setWorksIndex(worksIndex + 1)}><p>{`0${worksIndex + 1}`}</p></div>
         }
       </div>
 

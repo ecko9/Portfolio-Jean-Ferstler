@@ -1,16 +1,23 @@
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-
-  font-family: Impact, 'Arial Narrow Bold', sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@500&family=Fascinate&family=Genos:wght@500;700&family=Jura:wght@700&family=Michroma&family=Offside&family=Orbitron:wght@900&family=Plaster&family=Russo+One&family=Saira+Stencil+One&family=ZCOOL+QingKe+HuangYou&display=swap');
 
 $cubeSize: 10%;
 
 $secondary: rgba(187, 50, 50, 0.8);
 $black: rgba(15, 15, 15, 0.9);
 $white: rgb(248, 248, 248, 0.9);
+
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+
+  //font-family: Impact, 'Arial Narrow Bold', sans-serif; chiffres
+  font-family: 'Genos', sans-serif; // textes et titres +++
+  //font-family: 'Orbitron', sans-serif; titre JEAN
+  //font-family: 'Russo One', sans-serif; chiffres +++
+}
 
 @import './animations.scss';
 @import '../pages/Home.scss';

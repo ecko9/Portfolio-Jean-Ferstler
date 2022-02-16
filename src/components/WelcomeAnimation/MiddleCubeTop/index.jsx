@@ -9,8 +9,8 @@ const MiddleCubeTop = ({ index, isAnimated }) => {
     switch (index) {
       case 1: return "J"
       case 2: return "E"
-      case 4: return "A"
-      case 3: return "N"
+      case 3: return "A"
+      case 4: return "N"
       default: return;
     }
   }

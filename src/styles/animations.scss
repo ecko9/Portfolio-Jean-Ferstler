@@ -188,3 +188,12 @@
   90% {width: 100%;}
   100% {width: 0;}
 }
+
+@keyframes write-word-top {
+  0% {height: 0;}
+  10% {height: 0;}
+  30% {height: 85%;}
+  90% {height: 85%;}
+  100% {height: 1%;}
+}
+

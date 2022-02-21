@@ -4,7 +4,7 @@ const MailBar = () => {
   return (
     <div className='MailBar'>
       <div className='bar2' />
-      <p>jean.ferstler@gmail.com</p>
+      <a href="mailto:jean.ferstler@gmail.com">jean.ferstler@gmail.com</a>
       <div className='bar' />
     </div>
   );

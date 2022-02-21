@@ -40,6 +40,11 @@
   .NavLinks {
     height: 100%;
 
+    @media screen and (max-width: 600px) {
+      margin-right: 2%;
+    }
+    
+
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;

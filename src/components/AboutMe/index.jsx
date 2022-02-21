@@ -3,7 +3,7 @@ import React from 'react';
 const AboutMe = () => {
 
   const [indexWord, setIndexWord] = React.useState(0)
-  const words = ["Web.", "Developpement.", "Code.", "Sites.", "Design.", "Experience.", "Programmation.", "Internet."]
+  const words = ["WEB.", "DEVELOPPEMENT.", "CODE.", "SITES.", "DESIGN.", "EXPERIENCE.", "PROGRAMMATION.", "INTERNET."]
 
   const getNextIndex = () => {
     if (indexWord >= words.length - 1)

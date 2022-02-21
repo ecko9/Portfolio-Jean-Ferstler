@@ -7,8 +7,12 @@ const NetworksBar = () => {
       <p>Suivez Moi</p>
       <div className='bar2' />
       <div className='networks'>
-        <div className='network'></div>
-        <div className='network'></div>
+        <a className='network link' href="https://github.com/ecko9?tab=repositories">
+          <i className="fa-brands fa-github fa-xl"></i>
+        </a>
+        <a className='network link' href="https://www.linkedin.com/in/jean-ferstler-0855b520b/">
+          <i className="fa-brands fa-linkedin fa-xl"></i>
+        </a>
       </div>
     </div>
   );

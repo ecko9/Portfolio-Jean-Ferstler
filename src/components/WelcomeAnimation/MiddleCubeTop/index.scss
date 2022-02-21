@@ -4,6 +4,9 @@
 
   overflow: hidden;
   font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (min-width: 1700px) {
     font-size: 220px;
@@ -25,20 +28,20 @@
 
 .c3-top {
   transform-origin: right center;
-  background-color: $black;
-  color: $white;
+  background-color: black;
+  color: white;
 }
 .c4-top {
   transform-origin: top center;
-  background-color: $white;
+  background-color: white;
 }
 .c2-top {
   transform-origin: left center;
-  background-color: $black;
-  color: $white;
+  background-color: black;
+  color: white;
 }
 .c1-top {
   transform-origin: top center;
-  background-color: $white;
+  background-color: white;
   
 }

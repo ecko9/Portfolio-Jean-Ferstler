@@ -9,7 +9,7 @@ const ButtonEnterWebSite = ({ setAnimation, setDisplayWelcomeAnimation }) => {
 
   return (
     <div className='button-enter-ws' onClick={e => stopAnimation()}>
-      <span>Enter</span>
+      <span>Visiter</span>
     </div>
   );
 };

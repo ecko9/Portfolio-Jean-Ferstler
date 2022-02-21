@@ -21,8 +21,7 @@ const Col = ({ i, linesNumber, bgSize, displayWelcomeAnimation, setDisplayWelcom
       >
         {Array.from({ length: linesNumber }).map((n, i2) => (
           <Cube
-            key={i2} i={i} i2={i2}
-            linesNumber={linesNumber}
+            key={i2} i2={i2}
             animationsDelayTimes={animationsDelayTimes}
           />
         ))}

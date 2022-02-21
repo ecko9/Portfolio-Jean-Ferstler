@@ -21,7 +21,7 @@ const MiddleTriangle = ({ index, size, isAnimated }) => {
       style={{
         borderTop: `${size}px solid transparent`,
         borderBottom: `${size}px solid transparent`,
-        borderLeft: `${size}px solid rgba(187, 50, 50, 0.8)`
+        borderLeft: `${size}px solid rgba(212, 101, 57, 0.8)`
       }}
     >
     </div>

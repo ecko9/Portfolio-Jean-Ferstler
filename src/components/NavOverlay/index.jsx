@@ -3,7 +3,7 @@ import MailBar from './MailBar';
 import NavBar from './NavBar';
 import NetworksBar from './NetworksBar';
 
-const NavOverlay = ({ setDisplayElement }) => {
+const NavOverlay = ({ setDisplayElement, displayElement }) => {
   return (
     <div className='nav-overlay'>
 
@@ -12,7 +12,7 @@ const NavOverlay = ({ setDisplayElement }) => {
         <MailBar />
       </div>
 
-      <NavBar setDisplayElement={setDisplayElement} />
+      <NavBar setDisplayElement={setDisplayElement} displayElement={displayElement} />
 
       <NetworksBar />
 

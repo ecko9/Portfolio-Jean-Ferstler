@@ -8,7 +8,7 @@ const Content = () => {
 
   return (
     <div className='Content'>
-      <NavOverlay setDisplayElement={setDisplayElement} />
+      <NavOverlay setDisplayElement={setDisplayElement} displayElement={displayElement} />
       <MiddlePresentation displayElement={displayElement} />
     </div>
   );

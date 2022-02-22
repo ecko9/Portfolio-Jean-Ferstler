@@ -7,20 +7,20 @@ const Works = () => {
     {
       name: "Jessica Lyfoung",
       description: "Ce portfolio de photographe à été mon premier projet suite à ma formation de développeur web. J'ai pu grandement développer mes compétences en matière de design et d'expérience utilisateur ainsi que dans la relation client (besoins / attentes / contraintes ...).",
-      image: "./PresentationPortfolioJessicaLyfoung.png",
+      image: "./jessicalyfoung-cover.png",
       github: "https://github.com/ecko9/Portfolio-Photographe-Jessica-Lyfoung",
       website: "https://portfolio-jessica-lyfoung.herokuapp.com/"
     },
     {
       name: "PlayBox",
-      description: "PlayBox est une de mes premières réalisations en équipe. Nous avons réalisé ce projet de site de location / achat de Jeux de Société en deux semaines, dans le cadre du second projet final de notre formation. Le site permet aux utilsateurs de se faire livrer à leur domicile des jeux qu'ils auront préalablement acheté ou loué sur la plateforme. La location est possible via différentes formules d'abonnement nous permettant de bénéficier de différentes quantités de jeux tout les mois. Nous avons utilisé Ruby on Rails pour créer une API avec une base de donnée (postgreSQL) nous permettant de communiquer avec notre application React. Cette application est également une PWA, ce qui nous permet de télécharger l'application pour améliorer les performances et être accessible hors ligne.",
+      description: "PlayBox est une de mes premières réalisations en équipe. Nous avons réalisé ce projet de site de location / achat de Jeux de Société en deux semaines, dans le cadre du second projet final de notre formation. Le site permet aux utilsateurs de se faire livrer à leur domicile des jeux qu'ils auront préalablement achetés ou loués sur la plateforme. La location est possible en souscrivant à une des différentes formules d'abonnements nous permettant de bénéficier de diverses quantités de jeux tout les mois. Les utilisateurs peuvent également filtrer, noter, commenter et ajouter des jeux aux favoris afin d'améliorer leur expérience. Un tableau de bord de gestion des commandes et livraisons est quant à lui disponible pour les administrateurs. Côté technologies, nous avons utilisé Ruby on Rails pour créer une API avec une base de donnée (postgreSQL) nous permettant de communiquer avec notre application React. Cette application est également une PWA, ce qui nous permet de télécharger l'application pour améliorer les performances et être accessible hors ligne.",
       image: "./playbox-cover.png",
       github: "https://github.com/ecko9/THP_Project_final_front",
       website: "https://playbox-thp.herokuapp.com/"
     },
     {
       name: "Cookadom",
-      description: "Cookadom est ma première réalisation en équipe. Nous avons réalisé cette Marketplace réunissant cuisiniers indépendants et particuliers en deux semaines, dans le cadre de notre premier projet final de formation. Il est donc possible pour les partculiers de connaitre les cuisiniers proposants differentes cartes culinaires autour d'eux et de pouvoir leur commander différents plats. Le cuisinier dispose quant à lui un dashboard de gestion de ses plats, commandes et livraisons. Nous avons également mis en place un système de favoris, commentaires, notations, notifications ainsi q'une messagerie pour améliorer les interactions entre utilisateurs. Ce fut une première expérience en équipe intense et enrichissante apres 3 mois d'apprentissage de Ruby on Rails qui l'ont été tout autant!",
+      description: "Cookadom est ma première réalisation en équipe. Nous avons réalisé cette Marketplace réunissant cuisiniers indépendants et particuliers en deux semaines, dans le cadre de notre premier projet final de formation. Il est donc possible pour les particuliers de connaître les cuisiniers proposants differentes cartes culinaires autour d'eux et de pouvoir leur commander différents plats. Le cuisinier dispose quant à lui d'un tableau de bord de gestion de ses plats, commandes et livraisons. Nous avons également mis en place un système de favoris, commentaires, notations, notifications ainsi q'une messagerie pour améliorer les interactions entre utilisateurs. Ce fut une première expérience en équipe intense et enrichissante apres 3 mois d'apprentissage de Ruby on Rails qui l'ont été tout autant!",
       image: "./cookadom-cover.png",
       github: "https://github.com/ecko9/THP_Cookadom",
       website: "https://cookadom.herokuapp.com/"

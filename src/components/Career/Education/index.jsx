@@ -3,6 +3,7 @@ import React from 'react';
 const Education = () => {
   return (
     <div className='Education'>
+
       <div className='education-title'>
         <h2>Formations</h2>
         <div className='bar2' />

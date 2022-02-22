@@ -48,6 +48,8 @@
       flex-wrap: nowrap;
       align-items: flex-end;
 
+      cursor: pointer;
+
       .firstname {
         color: black;
       }
@@ -66,8 +68,9 @@
     @media screen and (max-width: 600px) {
       margin-right: 2%;
     }
-    
 
+    cursor: pointer;
+    
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;

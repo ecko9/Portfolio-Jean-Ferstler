@@ -11,6 +11,12 @@
   justify-content: flex-end;
   align-items: flex-end;
 
+  @media screen and (min-width: 601px) {
+    width: 50px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 25px;  
+  }
   p {
     color: white;
     width: 100px;

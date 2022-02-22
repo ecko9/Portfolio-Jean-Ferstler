@@ -15,5 +15,12 @@
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media screen and (min-width: 601px) {
+    top: 1%;
+  }
+  @media screen and (max-width: 600px) {
+    top: 2.5%;  
+  }
   
 }

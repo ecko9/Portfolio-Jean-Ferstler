@@ -5,7 +5,7 @@ import BackgroundLines from './BackgroundLines';
 const Background = ({ displayWelcomeAnimation, setDisplayWelcomeAnimation }) => {
 
   const [bgSize, setBgSize] = React.useState(null)
-  const [linesNumber, setLinesNumber] = React.useState(10)
+  const linesNumber = 10
 
   React.useEffect(
     () => {

@@ -33,46 +33,7 @@ $white: rgb(248, 248, 248, 0.9);
 @import './animations.scss';
 @import '../pages/Home.scss';
 
-@media screen and (min-width: 600px) {
-  .NetworksBar {
-    width: 50px;
-  }
-  .box-left-overlay {
-    width: 50px;
-  }
-  .NavBar {
-    height: 50px;
-    .bar {
-      margin-left: 20%;
-    }
-  }
-  .MiddlePresentation {
-    top:1%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .NavBar {
-    height: 40px;
-    .bar {
-      margin-left: 0;
-    }
-    .NavTitle {
-      width: 100%;
-    }
-  }
 
-  .NetworksBar {
-    width: 25px;  
-  }
-
-  .box-left-overlay {
-    width: 25px;
-  }
-
-  .MiddlePresentation {
-    top:2.5%;
-  }
-}
 
 
 

@@ -48,13 +48,13 @@
       flex-wrap: nowrap;
       align-items: flex-end;
 
-      cursor: pointer;
-
       .firstname {
         color: black;
+        cursor: pointer;
       }
       .lastname {
         color: white;
+        cursor: pointer;
       }
       .active {
         color: white;
@@ -69,8 +69,6 @@
       margin-right: 2%;
     }
 
-    cursor: pointer;
-    
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-end;
@@ -78,6 +76,7 @@
     h2 {
       margin-left: 10px;
       margin-right: 10px;
+      cursor: pointer;
     }
   }
 }

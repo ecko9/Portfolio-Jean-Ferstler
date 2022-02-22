@@ -1,9 +1,15 @@
 .box-left-overlay {
   position: absolute;
-  top: 13%;
   left: 5%;
 
-  height: 80%;
+  @media screen and (min-width: 601px) {
+    top: 13%;
+    height: 80%;
+  }
+  @media screen and (max-width: 600px) {
+    top: 21%;
+    height: 60%;
+  }
 
   .bar {
     height: 100%;

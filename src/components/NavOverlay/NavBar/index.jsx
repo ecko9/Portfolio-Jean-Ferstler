@@ -23,7 +23,6 @@ const NavBar = ({ setDisplayElement, displayElement }) => {
         </div>
       </div>
 
-
     </div>
   );
 };

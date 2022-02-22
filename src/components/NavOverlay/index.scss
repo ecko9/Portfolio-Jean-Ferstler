@@ -3,20 +3,35 @@
 @import './NetworksBar/index.scss';
 
 .nav-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
 
-  @media screen and (min-width: 601px) {
-    .box-left-overlay {
-      width: 50px;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+
+  display: flex;
+  flex-direction: column;
+
+  .box-left-overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    .bar {
+      position: relative;
+      height: 100%;
+      width: 2px;
+  
+      background-color: black;
     }
-  }
-  @media screen and (max-width: 600px) {
-    .box-left-overlay {
-      width: 25px;
-    } 
   }
 }

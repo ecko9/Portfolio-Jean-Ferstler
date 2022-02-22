@@ -6,15 +6,14 @@ import NetworksBar from './NetworksBar';
 const NavOverlay = ({ setDisplayElement, displayElement }) => {
   return (
     <div className='nav-overlay'>
+      <NavBar setDisplayElement={setDisplayElement} displayElement={displayElement} />
 
       <div className='box-left-overlay'>
         <div className='bar' />
-        <MailBar />
+        <NetworksBar />
       </div>
+      <MailBar />
 
-      <NavBar setDisplayElement={setDisplayElement} displayElement={displayElement} />
-
-      <NetworksBar />
 
     </div>
   );

@@ -7,12 +7,19 @@
   height: 100%;
 
   display: flex;
-
+  
   .WorksIndex {
     position: fixed;
-  
-    width: 15%;
-    height: 70%;
+
+    @media screen and (min-width: 600px) {
+      width: 15%;
+      height: 70%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 80%;
+      height: 15vw;
+      display: flex;
+    }
 
     p {
       font-family: 'Genos', Impact, sans-serif;
@@ -21,8 +28,14 @@
     
 
     .prev {
-      width: 100%;
-      height: 20%;
+      @media screen and (min-width: 600px) {
+        width: 100%;
+        height: 20%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 25%;
+        height: 100%;
+      }
 
       display: flex;
       justify-content: center;
@@ -36,9 +49,14 @@
     }
 
     .work-index {
-
-      width: 100%;
-      height: 60%;
+      @media screen and (min-width: 600px) {
+        width: 100%;
+        height: 60%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 50%;
+        height: 100%;
+      }
 
       display: flex;
       justify-content: center;
@@ -59,8 +77,14 @@
     }
 
     .next {
-      width: 100%;
-      height: 20%;
+      @media screen and (min-width: 600px) {
+        width: 100%;
+        height: 20%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 25%;
+        height: 100%;
+      }
 
       display: flex;
       justify-content: center;
@@ -74,14 +98,26 @@
     }
   }
   .WorksPresentation {
-    width: 80%;
-    height: 100%;
-
-    margin-left: 25%;
-    padding-left: 5%;
+    
+    
 
     display: flex;
-    border-left: 2px dotted black;
+    
+
+    @media screen and (min-width: 600px) {
+      width: 80%;
+      height: 100%;
+      margin-left: 25%;
+      padding-left: 5%;
+      border-left: 2px dotted black;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      height: 80%;
+      margin-top: 25%;
+      padding-top: 5%;
+      border-top: 2px dotted black;
+    }
     
     .work-presentation {
       width: 100%;
@@ -138,13 +174,17 @@
         flex-wrap: wrap;
         overflow: scroll;
         
-
+        @media screen and (max-width: 600px) {
+          margin-top: 5%;
+          height: 50%;
+        }
+        
         h2 {
           font-size: 50px;
-          width: 50%;
+          margin-right: 20px;
         }
         .bar {
-          width: 50%;
+          flex: 2;
           height: 2px;
           margin-top: 40px;
 

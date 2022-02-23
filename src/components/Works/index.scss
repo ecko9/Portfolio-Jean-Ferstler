@@ -105,7 +105,7 @@
     display: flex;
     overflow-y: scroll;
 
-    -ms-overflow-style: scrollbar;  /* IE and Edge */
+    -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: 2px;  /* Firefox */
 
     &::-webkit-scrollbar {
@@ -115,7 +115,6 @@
 
     &::-webkit-scrollbar-thumb {
       width: 2px;
-      height: 10px;
       border-radius: 50%;
       background-color: white;
     }

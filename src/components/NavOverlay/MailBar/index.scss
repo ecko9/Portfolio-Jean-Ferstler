@@ -21,6 +21,11 @@
     font-weight: 500;
     margin-left: 20px;
     transform: translateY(30%);
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
   }
 
   .bar {

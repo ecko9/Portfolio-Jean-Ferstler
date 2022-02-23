@@ -44,6 +44,11 @@
 
     i {
       color: black;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 }

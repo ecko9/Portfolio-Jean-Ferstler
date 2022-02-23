@@ -52,9 +52,9 @@ const Works = () => {
         <div className='work-presentation'>
 
           <div className='work-link' style={{ backgroundImage: `url(${works[worksIndex].image})` }}>
-            <a href={`${works[worksIndex].website}`} ><i className="fa-solid fa-link fa-5x link"></i></a>
+            <a href={`${works[worksIndex].website}`} target="_blank" rel="noreferrer"><i className="fa-solid fa-link fa-5x link"></i></a>
             <div className='bar' />
-            <a href={`${works[worksIndex].github}`} ><i className="fa-brands fa-github fa-5x link"></i></a>
+            <a href={`${works[worksIndex].github}`} target="_blank" rel="noreferrer"><i className="fa-brands fa-github fa-5x link"></i></a>
           </div>
 
           <div className='work-description'>

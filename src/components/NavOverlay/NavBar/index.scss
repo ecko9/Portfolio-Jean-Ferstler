@@ -52,6 +52,12 @@
         color: white;
       }
     }
+
+    &:hover {
+      .firstname {
+        color: white;
+      }
+    }
   }
 
   .NavLinks {
@@ -73,6 +79,10 @@
 
       @media screen and (max-width: 600px) {
         border-bottom: 2px solid black;
+      }
+
+      &:hover {
+        color: white;
       }
     }
   }

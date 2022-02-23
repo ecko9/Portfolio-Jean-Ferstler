@@ -24,6 +24,10 @@
     p {
       font-family: 'Genos', Impact, sans-serif;
       font-weight: 900;
+
+      &:hover {
+        color: white;
+      }
     }
     
 
@@ -99,6 +103,22 @@
   }
   .WorksPresentation {
     display: flex;
+    overflow-y: scroll;
+
+    -ms-overflow-style: scrollbar;  /* IE and Edge */
+    scrollbar-width: 2px;  /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 2px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+    }
 
     @media screen and (min-width: 601px) {
       width: 80%;
@@ -170,7 +190,6 @@
 
         display: flex;
         flex-wrap: wrap;
-        overflow: scroll;
         justify-content: flex-end;
         
         @media screen and (max-width: 600px) {

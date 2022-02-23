@@ -10,7 +10,7 @@ const Background = ({ displayWelcomeAnimation, setDisplayWelcomeAnimation }) => 
   React.useEffect(
     () => {
       const determineBgSize = () => {
-        let hypothenuse = Math.floor(Math.pow(Math.floor(Math.pow(window.screen.width, 2) + Math.pow(window.screen.height, 2)), 0.5))
+        let hypothenuse = Math.floor(Math.pow(Math.floor(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2)), 0.5))
         setBgSize(hypothenuse)
       }
 

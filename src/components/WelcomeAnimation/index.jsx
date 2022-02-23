@@ -40,7 +40,7 @@ const WelcomeAnimation = ({ bgSize, setDisplayWelcomeAnimation }) => {
           <MiddleTriangle
             key={i} index={i + 1}
             isAnimated={isAnimated}
-            size={Math.floor(bgSize / 10)}
+            size={Math.floor(bgSize / 10) + 1}
           />
         ))}
       </div>
